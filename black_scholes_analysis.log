@@ -1,0 +1,8 @@
+2024-08-02 13:46:37,289 - __main__ - INFO - Starting Black-Scholes model analysis
+2024-08-02 13:46:37,290 - root - INFO - Performing ethical checks...
+2024-08-02 13:46:37,290 - root - INFO - Ethical checks passed.
+2024-08-02 13:46:37,290 - data_processor - INFO - Fetching stock data for AAPL from 2023-01-01 to 2024-01-01
+2024-08-02 13:46:44,086 - data_processor - INFO - Fetching option data for AAPL with expiration date 2024-08-02
+2024-08-02 13:46:44,302 - data_processor - INFO - Preprocessing stock and option data
+2024-08-02 13:46:44,317 - __main__ - INFO - Stock price: 192.02, Risk-free rate: 0.05, Volatility: nan
+2024-08-02 13:46:44,338 - __main__ - ERROR - An error occurred: Input contains NaN.
