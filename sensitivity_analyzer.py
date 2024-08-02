@@ -3,16 +3,11 @@ import matplotlib.pyplot as plt
 import logging
 
 class SensitivityAnalyzer:
-    """
-    A class to perform sensitivity analysis on the Black-Scholes model.
-    """
-
     def __init__(self, model):
         self.model = model
         self.logger = logging.getLogger(__name__)
 
     def parameter_sensitivity(self, param, base_value, range_pct, steps, **kwargs):
-        """Analyze sensitivity of option price to changes in a parameter."""
         param_range = np.linspace(base_value * (1 - range_pct), 
                                   base_value * (1 + range_pct), 
                                   steps)
@@ -30,7 +25,6 @@ class SensitivityAnalyzer:
         self.logger.info(f"Sensitivity analysis for {param} saved as 'sensitivity_{param}.png'")
 
     def plot_greeks(self, S, K, T, r, sigma):
-        """Plot the Greeks for a range of stock prices."""
         S_range = np.linspace(0.5 * K, 1.5 * K, 100)
         
         deltas = [self.model.delta(s, K, T, r, sigma) for s in S_range]
